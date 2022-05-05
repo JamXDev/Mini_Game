@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+  background-color:rgb(22, 15, 49);
+  color: #fff;
+	font-size: calc(var(--index) * .8);
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.5;
+	height: var(--depth);
+	font-weight: 200px;
+  font-size: 35px;
+}
+
+.frame {
+	width: 100%;
+	height: 100%;
+	position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h2 {
+	font-weight: 100;
+	text-transform: uppercase;
+	width: min-content;
+	line-height: 1;
+}
+
+.frame h2 {
+	text-align: center;
+	font-size: calc(var(--index) * 3.3);
+}
+
+.block {
+  background: url('img/bg_repeat.jpg');
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgb rgb(255, 255, 255);
+  
+}
+
+.game {
+  width: 800px;
+  height: 180px;
+  border-bottom: 2px solid rgb(65, 166, 134);
+  margin: auto;
+  position: relative;
+}
+
+#dino {
+  width: 50px;
+  height: 50px;
+  background-image: url(img/2.webp);
+  background-size: 50px 50px;
+  position: relative;
+  top: 130px;
+}
+#cactus {
+  width: 40px;
+  height: 40px;
+  background-image: url(img/potato.webp);
+  background-size: 40px 40px;
+  position: relative;
+  top: 90px;
+  left: 700px;
+  animation: cactusMov 1.5s infinite linear;
+}
+
+.soundContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.equalizer {
+	width: 50px;
+	opacity: 0.3;
+  transition: 0.3s ease-in-out;
+}
+
+.equalizer:active {
+  opacity: 1;
+}
+
+.equalizer {
+  height: 50px;
+}
+
+@keyframes cactusMov {
+  0% {
+     left: 680px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+.jump {
+  animation: jump 0.5s linear;
+}
+@keyframes jump {
+  0% {
+     top: 130px;
+  }
+  30% {
+    top: 110px;
+  }
+  50% {
+    top: 60px;
+  }
+  80% {
+    top: 110px;
+  }
+  100% {
+    top: 130px;
+  }
+}
